@@ -1,11 +1,13 @@
 import Question1 from "./components/cycleOne/Question1";
+import Question2 from "./components/cycleOne/Question2";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <h1>Test react.</h1>
+      <h1>Cycle One.</h1>
       <Question1 />
+      <Question2 />
       <hr />
     </>
   );

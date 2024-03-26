@@ -16,11 +16,13 @@ const Question1 = () => {
   };
   return (
     <div>
-      <p>- Your challenge is to build a brand filter for products.</p>
-      <p>
-        - The parameters for the brand filter, i.e, brand names should appear
-        when you search for the brand name in an input box
-      </p>
+      <ul>
+        <li>- Your challenge is to build a brand filter for products.</li>
+        <li>
+          - The parameters for the brand filter, i.e, brand names should appear
+          when you search for the brand name in an input box
+        </li>
+      </ul>
       <input
         type="text"
         placeholder="search brand..."
@@ -28,11 +30,13 @@ const Question1 = () => {
           filterBrandsHandler(e.target.value);
         }}
       />
-      {filteredBrands?.map((item) => (
-        <>
-          <p>{item.brandName}</p>
-        </>
-      ))}
+      <ul>
+        {filteredBrands?.map((item) => (
+          <>
+            <li>{item.brandName}</li>
+          </>
+        ))}
+      </ul>
     </div>
   );
 };
