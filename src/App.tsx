@@ -7,8 +7,16 @@ function App() {
     <>
       <h1>Cycle One.</h1>
       <Question1 />
-      <Question2 />
       <hr />
+      <Question2 />
+      {/* HTML button element 
+      HTML input element 
+      CSSProperties
+      passing props in TS. 
+      import and export types (file.types.ts)
+      
+      
+      */}
     </>
   );
 }
