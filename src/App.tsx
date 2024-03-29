@@ -6,6 +6,7 @@ import { ThemeProvider } from "./components/context/ThemeProvider";
 import MutableRef from "./components/MutableRef";
 import "./App.css";
 import List from "./components/generic/List";
+import CustomButton from "./components/html/CustomButton";
 
 function App() {
   return (
@@ -32,6 +33,9 @@ function App() {
       />
       {/* <List items={[1, 3, 4]} />
       <List items={["a", "o", "i", "e", "u"]} /> */}
+      <hr />
+      <CustomButton type="radio" id="male" label="Male" name="gender" />
+      <CustomButton type="radio" id="female" label="Female" name="gender" />
     </>
   );
 }
