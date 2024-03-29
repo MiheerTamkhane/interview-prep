@@ -1,5 +1,5 @@
 import React from "react";
-import { useTheme, ThemeProvider } from "./ThemeProvider";
+import { useTheme } from "./ThemeProvider";
 
 const Box = () => {
   const { theme, setTheme } = useTheme();

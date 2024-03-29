@@ -3,6 +3,7 @@ import Question2 from "./components/cycleOne/Question2";
 import Counter from "./components/Counter";
 import Box from "./components/context/Box";
 import { ThemeProvider } from "./components/context/ThemeProvider";
+import MutableRef from "./components/MutableRef";
 import "./App.css";
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
       <ThemeProvider>
         <Box />
       </ThemeProvider>
+      <hr />
+      <MutableRef />
     </>
   );
 }
