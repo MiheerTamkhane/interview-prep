@@ -5,6 +5,7 @@ import Box from "./components/context/Box";
 import { ThemeProvider } from "./components/context/ThemeProvider";
 import MutableRef from "./components/MutableRef";
 import "./App.css";
+import List from "./components/generic/List";
 
 function App() {
   return (
@@ -14,13 +15,23 @@ function App() {
       <hr />
       {/* <Question2 /> */}
       <hr />
-      <Counter />
+      {/* <Counter /> */}
       <hr />
-      <ThemeProvider>
+      {/* <ThemeProvider>
         <Box />
-      </ThemeProvider>
+      </ThemeProvider> */}
       <hr />
-      <MutableRef />
+      {/* <MutableRef /> */}
+      <hr />
+      <List
+        items={[
+          { id: 1, name: "Miheer" },
+          { id: 2, name: "Yash" },
+          { id: 3, name: "Sarang" },
+        ]}
+      />
+      {/* <List items={[1, 3, 4]} />
+      <List items={["a", "o", "i", "e", "u"]} /> */}
     </>
   );
 }
