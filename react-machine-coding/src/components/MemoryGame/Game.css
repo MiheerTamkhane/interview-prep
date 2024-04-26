@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  gap: 0.5rem;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+  border: 1px solid white;
+}
+.scene {
+  width: 200px;
+  height: 260px;
+  perspective: 600px;
+}
+.card_face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  cursor: pointer;
+}
+
+.card_face--front {
+  background-color: rgb(202, 202, 202);
+}
+
+.card_face--back {
+  transform: rotateY(180deg);
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card.active {
+  transform: rotateY(180deg);
+}
+.card.wrong {
+  transform: rotateY(180deg);
+}
+.card.correct {
+  background-color: red;
+}
