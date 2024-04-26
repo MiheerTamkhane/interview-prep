@@ -29,15 +29,19 @@ const data = {
   },
 };
 
-function renderElement(obj = null) {
-  return (
-    obj &&
-    React.createElement(
-      obj?.tag,
-      { className: obj?.id?.className },
-      obj.desc,
-      renderElement(obj?.child)
-    )
+interface ElementParam {
+  id: { className: string };
+  desc: string;
+  tag: string;
+  child?: ElementParam;
+}
+
+function renderElement(obj: ElementParam): JSX.Element {
+  return React.createElement(
+    obj?.tag,
+    { className: obj?.id?.className },
+    obj.desc,
+    obj.child && renderElement(obj.child)
   );
 }
 

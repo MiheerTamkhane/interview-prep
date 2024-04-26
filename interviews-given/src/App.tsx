@@ -1,11 +1,14 @@
 import "./App.css";
-import SevenEleven from "./companies/7-eleven/SevernEleven.jsx";
+import SevenEleven from "./companies/7-eleven/SevernEleven.tsx";
+import Alkira from "./companies/alkira/Alkira.tsx";
 function App() {
   return (
     <>
       <h1>Interview Prep</h1>
       <hr />
       <SevenEleven />
+      <hr />
+      <Alkira />
     </>
   );
 }
