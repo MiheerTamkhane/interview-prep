@@ -22,18 +22,13 @@
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card_face--front {
   background-color: rgb(202, 202, 202);
-}
-
-.card_face--back {
-  transform: rotateY(180deg);
-}
-
-.card.is-flipped {
-  transform: rotateY(180deg);
 }
 
 .card.active {
@@ -41,7 +36,8 @@
 }
 .card.wrong {
   transform: rotateY(180deg);
+  border: 2px solid red;
 }
 .card.correct {
-  background-color: red;
+  border: 2px solid greenyellow;
 }

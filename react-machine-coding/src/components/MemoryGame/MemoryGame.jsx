@@ -1,13 +1,13 @@
 import { useRef, useState } from "react";
 import "./Game.css";
-import { data } from "./data";
+
 export const MemoryGame = () => {
   const [items, setItems] = useState(
     [
       {
         id: 1,
         color: "brown",
-        stat: "active",
+        stat: "",
       },
       {
         id: 2,
@@ -17,7 +17,7 @@ export const MemoryGame = () => {
       {
         id: 3,
         color: "darkCyan",
-        stat: "wrong",
+        stat: "",
       },
       {
         id: 3,
@@ -27,7 +27,7 @@ export const MemoryGame = () => {
       {
         id: 1,
         color: "brown",
-        stat: "correct",
+        stat: "",
       },
       {
         id: 2,
@@ -37,8 +37,9 @@ export const MemoryGame = () => {
     ].sort(() => Math.random() - 0.5)
   );
   const prev = useRef(-1);
+
   const compare = (index) => {
-    if (prev.current === items[index].id) {
+    if (items[prev.current].id === items[index].id) {
       items[index].stat = "correct";
       items[prev.current].stat = "correct";
       setItems([...items]);
@@ -56,9 +57,13 @@ export const MemoryGame = () => {
     }
   };
   const handleClick = (index) => {
+    if (index === prev.current) {
+      alert("Please select a new item.");
+      return;
+    }
     if (prev.current === -1) {
       items[index].stat = "active";
-      prev.current = items[index]?.id;
+      prev.current = index;
       setItems([...items]);
     } else {
       compare(index);
@@ -68,12 +73,13 @@ export const MemoryGame = () => {
     <div>
       <h1>Memory Game</h1>
       <div className="container">
-        {items.map(({ id, color, index }) => (
+        {items.map(({ color, stat }, index) => (
           <Card
             key={index}
             color={color}
             index={index}
             handleClick={handleClick}
+            stat={stat}
           />
         ))}
       </div>
@@ -82,17 +88,16 @@ export const MemoryGame = () => {
 };
 
 const Card = (props) => {
-  const { id, color, index, handleClick } = props;
-
+  const { color, stat, index, handleClick } = props;
   return (
     <div className="scene">
       <div
-        className={`card`}
+        className={`card ${stat ? "active " + stat : ""}`}
         style={{ backgroundColor: color }}
         onClick={() => handleClick(index)}
       >
-        <div className="card_face card_face--front">Face</div>
-        <div className="card_face card_face--back">Back</div>
+        <div className="card_face card_face--front"></div>
+        <div className="card_face">Guess?</div>
       </div>
     </div>
   );
