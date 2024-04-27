@@ -1,10 +1,11 @@
 import "./App.css";
-import { MemoryGame } from "./components";
+import { MemoryGame, Tabs } from "./components";
 
 function App() {
   return (
     <>
-      <MemoryGame />
+      {/* <MemoryGame /> */}
+      <Tabs />
     </>
   );
 }

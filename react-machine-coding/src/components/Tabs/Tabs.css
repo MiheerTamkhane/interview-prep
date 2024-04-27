@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 400px;
+}
+.tab__switch {
+  display: flex;
+  gap: 0.5rem;
+}
+.tab {
+  cursor: pointer;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+}
+.active {
+  background-color: black;
+}
+.desc {
+  background-color: whitesmoke;
+  color: black;
+  height: 100%;
+  text-align: justify;
+  padding: 0.7rem;
+}
