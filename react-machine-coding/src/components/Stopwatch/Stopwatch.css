@@ -1,0 +1,23 @@
+.button-wrapper {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.start {
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  background-color: cadetblue;
+}
+
+.pause {
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  background-color: chocolate;
+}
+
+.kill {
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  background-color: darkolivegreen;
+}

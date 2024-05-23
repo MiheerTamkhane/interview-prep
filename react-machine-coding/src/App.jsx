@@ -1,12 +1,13 @@
 import "./App.css";
-import { MemoryGame, Tabs, Accordion } from "./components";
+import { MemoryGame, Tabs, Accordion, Stopwatch } from "./components";
 
 function App() {
   return (
     <>
       {/* <MemoryGame /> */}
       {/* <Tabs /> */}
-      <Accordion />
+      {/* <Accordion /> */}
+      <Stopwatch />
     </>
   );
 }
