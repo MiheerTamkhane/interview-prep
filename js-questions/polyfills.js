@@ -80,9 +80,10 @@ Function.prototype.myBind = function (context = {}, ...args) {
   if (typeof this !== "function") {
     throw new Error("Cannot call function");
   }
-  context.fn = this;
+  // context.fn = this;
+  const newFn = this;
   return function (...newArgs) {
-    return context.fn(...newArgs, ...args);
+    return newFn.call(context, ...newArgs, ...args);
   };
 };
 
@@ -94,9 +95,27 @@ const obj = {
 };
 
 const unboundGetX = obj.getX;
-console.log(unboundGetX()); // The function gets invoked at the global scope
+// console.log(unboundGetX()); // The function gets invoked at the global scope
 // Expected output: undefined
 
 const boundGetX = unboundGetX.myBind(obj);
-console.log(boundGetX());
+// console.log(boundGetX());
+// console.log(obj);
 // Expected output: 42
+
+// Polyfill for once();
+function myOnce(func, context = {}) {
+  let flag;
+  return function () {
+    if (func) {
+      flag = func.call(context || this, arguments);
+      func = null;
+    }
+    return flag;
+  };
+}
+
+const hello = myOnce(() => console.log("hello"));
+
+// hello();
+// hello();
