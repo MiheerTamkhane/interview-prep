@@ -119,3 +119,22 @@ const hello = myOnce(() => console.log("hello"));
 
 // hello();
 // hello();
+
+// Polyfill for Array.prototype.flat();
+Array.prototype.myFlat = function (depth = 1) {
+  const flattened = (arr, depth) => {
+    let result = [];
+    arr.forEach((ele) => {
+      if (Array.isArray(ele) && depth > 0) {
+        result.push(...flattened(ele, depth - 1));
+      } else {
+        result.push(ele);
+      }
+    });
+
+    return result;
+  };
+  return flattened(this, depth);
+};
+
+console.log([1, 2, [3, [4]]].myFlat(1));
