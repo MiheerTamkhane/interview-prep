@@ -137,4 +137,58 @@ Array.prototype.myFlat = function (depth = 1) {
   return flattened(this, depth);
 };
 
-console.log([1, 2, [3, [4]]].myFlat(1));
+// console.log([1, 2, [3, [4]]].myFlat(1));
+
+// Promise.all() polyfill.
+
+let promiseOne = Promise.resolve("First");
+let promiseTwo = Promise.resolve("Two");
+let promiseThree = Promise.resolve("Three");
+
+Promise.myAll = function (promises = []) {
+  return new Promise((resolve, reject) => {
+    let results = [];
+    if (!promises.length) {
+      return results;
+    }
+    let pending = promises.length;
+    promises.forEach((promise, idx) => {
+      Promise.resolve(promise).then((result) => {
+        results[idx] = result;
+        pending--;
+
+        if (pending === 0) {
+          resolve(results);
+        }
+      }, reject);
+    });
+  });
+};
+
+Promise.myAll([promiseOne, promiseTwo, promiseThree]).then((res) =>
+  console.log(res)
+);
+
+// Deboucing polyfill in js.
+function debounce(cb, delay = 500) {
+  let timer;
+  return function (...args) {
+    if (timer) clearInterval(timer);
+
+    timer = setTimeout(() => cb.apply(this, args), delay);
+  };
+}
+
+// Throttling polyfill in js.
+function throttle(cb, delay = 500) {
+  let flag = false;
+  return function (...args) {
+    if (!flag) {
+      cb.apply(this, args);
+      setTimeout(() => {
+        flag = false;
+      }, delay);
+      flag = true;
+    }
+  };
+}
