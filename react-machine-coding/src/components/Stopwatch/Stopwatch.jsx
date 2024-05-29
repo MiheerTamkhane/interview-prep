@@ -6,6 +6,7 @@ export const Stopwatch = () => {
   let timeout = useRef(null);
 
   function startWatch() {
+    if(timeout.current) clearTimeout(timeout.current)
     timeout.current = setInterval(() => {
       setSec((prev) => prev + 1);
     }, 1000);
