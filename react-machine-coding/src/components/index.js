@@ -4,3 +4,4 @@ export { Accordion } from "./Accordion/Accordion";
 export { Stopwatch } from "./Stopwatch/Stopwatch";
 export {Clock} from './Clock/Clock'
 export { ChatComponent } from './ChatComponent/ChatComponent'
+export { Pagination } from './Pagination/Pagination'

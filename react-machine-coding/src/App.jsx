@@ -6,17 +6,13 @@ import {
   Stopwatch,
   Clock,
   ChatComponent,
+  Pagination,
 } from "./components";
 
 function App() {
   return (
     <>
-      {/* <MemoryGame /> */}
-      {/* <Tabs /> */}
-      {/* <Accordion /> */}
-      {/* <Stopwatch /> */}
-      {/* <Clock/> */}
-      <ChatComponent />
+      <Pagination />
     </>
   );
 }
