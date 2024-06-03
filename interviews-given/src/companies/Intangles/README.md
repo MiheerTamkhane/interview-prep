@@ -14,6 +14,11 @@
 12. Questions of useEffect.
 13. What is code splitting.
 14. What is bundling? What are diff tools for it.
+15. Does Redux is synchronous.
+16. Lifecycle of redux.
+17. Middlewares in redux.
+18. where you can put middlewares in redux.
+19. print lines on google map using google map api.
 
 # Snippets
 
