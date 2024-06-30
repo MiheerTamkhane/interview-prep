@@ -19,3 +19,14 @@
    Ex. countUniqueValues([1,1,1,1,1,2]) // 2
    Ex. countUniqueValues([1,2,3,4,4,4,7,7,12,12,14]) // 7
    Ex. countUniqueValues([-2, -1, -1, 0, 1]) // 7
+
+## Sliding Window Pattern
+
+1. Find the longest unique characters of string.
+
+Ex. 'hellothers' => "lother".
+
+2. Write a function called maxSubarraySum which accepts an array of integers and a number called n. The function should calculate the maximum sum of n consecutive elements in the array.
+
+Ex. maxSubarraySum([1,3,5, 2, 8, 1, 5], 2) // 10
+maxSubarraySum([1,2,5,2,8,1,5], 4) // 17
