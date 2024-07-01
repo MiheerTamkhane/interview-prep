@@ -8,6 +8,21 @@
 
 2. Write isAnagram() with this pattern.
 
+3. Write a function called sameFrequency. Given two positive integers, find out if the two numbers have the same frequency of digits.
+
+   Examples:
+   sameFrequency(182,281) // true
+   sameFrequency(34,14) // false
+   sameFrequency(3589578, 5879385) // true
+   sameFrequency(22,222) // false
+
+4. Implement a function called, areThereDuplicates which accepts a variable number of arguments, and checks whether there are any duplicates among the arguments passed in. You can solve this using the frequency counter pattern OR the multiple pointers pattern.
+
+   Examples:
+   areThereDuplicates(1, 2, 3) // false
+   areThereDuplicates(1, 2, 2) // true
+   areThereDuplicates('a', 'b', 'c', 'a') // true
+
 ## Mutlipointer Pattern.
 
 1. Given sorted array find the first two pair of numbers which gives 0 result after addition.
@@ -29,4 +44,8 @@ Ex. 'hellothers' => "lother".
 2. Write a function called maxSubarraySum which accepts an array of integers and a number called n. The function should calculate the maximum sum of n consecutive elements in the array.
 
 Ex. maxSubarraySum([1,3,5, 2, 8, 1, 5], 2) // 10
-maxSubarraySum([1,2,5,2,8,1,5], 4) // 17
+maxSubarraySum([1 ,2 ,5 ,2 ,8 ,1 ,5], 4) // 17
+
+## Divide and Conquer
+
+1. Find the number/target in an array using binarySearch algorithm, O(log n)
