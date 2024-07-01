@@ -1,9 +1,11 @@
-# null vs undefined
+# Algorithms
 
-`undefined` is basically a variable which does not initialized with any value.
+Normal interview problems asked in companies.
 
-`null` is actually a value given to a variable.
+# Patterns
 
----
+Problem solving patterns, to solve the interview questions.
 
-# Hoisting
+# Polyfills
+
+Polyfills in Javascript, still cooking.
