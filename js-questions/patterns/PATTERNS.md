@@ -25,7 +25,7 @@
 
 ## Mutlipointer Pattern.
 
-1. Given sorted array find the first two pair of numbers which gives 0 result after addition.
+1. Given sorted array find the first pair of numbers which gives 0 result after addition.
 
    Ex. [-3, -2, -1, 0, 1, 2, 4] => [-2, 2] = 0;
 
@@ -34,6 +34,13 @@
    Ex. countUniqueValues([1,1,1,1,1,2]) // 2
    Ex. countUniqueValues([1,2,3,4,4,4,7,7,12,12,14]) // 7
    Ex. countUniqueValues([-2, -1, -1, 0, 1]) // 7
+
+3. Write a function called averagePair. Given a sorted array of integers and a target average, determine if there is a pair of values in the array where the average of the pair equals the target average. There may be more than one pair that matches the average target.
+
+   Example: averagePair([1,2,3],2.5) // true
+   averagePair([1,3,3,5,6,7,10,12,19],8) // true
+   averagePair([-1,0,3,4,5,6], 4.1) // false
+   averagePair([],4) // false
 
 ## Sliding Window Pattern
 
