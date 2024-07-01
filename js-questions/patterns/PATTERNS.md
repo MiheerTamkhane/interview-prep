@@ -42,16 +42,34 @@
    averagePair([-1,0,3,4,5,6], 4.1) // false
    averagePair([],4) // false
 
+4. Write a function called isSubsequence which takes in two strings and checks whether the characters in the first string form a subsequence of the characters in the second string. In other words, the function should check whether the characters in the first string appear somewhere in the second string, without their order changing.
+
+   Examples:
+   isSubsequence('hello', 'hello world'); // true
+   isSubsequence('sing', 'sting'); // true
+   isSubsequence('abc', 'abracadabra'); // true
+   isSubsequence('abc', 'acb'); // false (order matters)
+
 ## Sliding Window Pattern
 
 1. Find the longest unique characters of string.
 
-Ex. 'hellothers' => "lother".
+   Ex. 'hellothers' => "lother".
 
 2. Write a function called maxSubarraySum which accepts an array of integers and a number called n. The function should calculate the maximum sum of n consecutive elements in the array.
 
-Ex. maxSubarraySum([1,3,5, 2, 8, 1, 5], 2) // 10
-maxSubarraySum([1 ,2 ,5 ,2 ,8 ,1 ,5], 4) // 17
+   Ex. maxSubarraySum([1,3,5, 2, 8, 1, 5], 2) // 10
+   maxSubarraySum([1 ,2 ,5 ,2 ,8 ,1 ,5], 4) // 17
+
+3. Given an array of integers and a number, write a function called maxSubarraySum, which finds the maximum sum of a subarray with the length of the number passed to the function.
+
+   Note that a subarray must consist of consecutive elements from the original array. In the first example below, [100, 200, 300] is a subarray of the original array, but [100, 300] is not.
+
+   Examples: maxSubarraySum([100,200,300,400], 2) // 700
+   maxSubarraySum([1,4,2,10,23,3,1,0,20], 4) // 39
+   maxSubarraySum([-3,4,0,-2,6,-1], 2) // 5
+   maxSubarraySum([3,-2,7,-4,1,-1,4,-2,1],2) // 5
+   maxSubarraySum([2,3], 3) // null
 
 ## Divide and Conquer
 
