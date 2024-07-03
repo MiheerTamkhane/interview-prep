@@ -7,13 +7,13 @@ function binarySearch(arr, target) {
     if (arr[mid] === target) {
       return mid;
     } else if (arr[mid] < target) {
-      left = left + 1;
+      left = mid + 1;
     } else {
-      right = right - 1;
+      right = mid - 1;
     }
   }
 
   return -1;
 }
 
-console.log(binarySearch([1, 2, 3, 4, 5], 3));
+console.log(binarySearch([1, 2, 3, 4, 5], 5));
