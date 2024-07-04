@@ -5,7 +5,6 @@ function isSubsequence(str1, str2) {
     if (str1[i] === str2[j]) {
       i++;
     }
-    console.log("i : ", i, "j : ", j);
     if (i === str1.length) {
       return true;
     }
